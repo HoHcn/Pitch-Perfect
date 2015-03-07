@@ -16,40 +16,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsx-N8-kfD">
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsx-N8-kfD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Record Button">
+                                <state key="normal" image="microphone">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xHL-Ow-4fb"/>
+                                </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="recordingLabel" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-cd-xnz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.27246408789642057" green="0.52190574518471788" blue="0.7442787247474747" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zsx-N8-kfD" firstAttribute="centerX" secondItem="HVb-cd-xnz" secondAttribute="centerX" id="NK7-ap-bmu"/>
+                            <constraint firstAttribute="centerX" secondItem="zsx-N8-kfD" secondAttribute="centerX" id="ZJd-BH-THS"/>
                             <constraint firstAttribute="centerX" secondItem="zsx-N8-kfD" secondAttribute="centerX" id="ZVB-sU-6e0"/>
+                            <constraint firstItem="HVb-cd-xnz" firstAttribute="top" secondItem="zsx-N8-kfD" secondAttribute="bottom" constant="8" id="iPw-tE-Vhd">
+                                <variation key="widthClass=compact" constant="12"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="zsx-N8-kfD" secondAttribute="centerY" id="p0d-u2-c16"/>
+                            <constraint firstItem="zsx-N8-kfD" firstAttribute="centerX" secondItem="HVb-cd-xnz" secondAttribute="centerX" id="sag-8A-EPv"/>
                             <constraint firstAttribute="centerY" secondItem="zsx-N8-kfD" secondAttribute="centerY" id="uiR-00-VRC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="zsx-N8-kfD"/>
+                                <exclude reference="HVb-cd-xnz"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="iPw-tE-Vhd"/>
+                                <exclude reference="NK7-ap-bmu"/>
+                                <exclude reference="ZJd-BH-THS"/>
                                 <exclude reference="ZVB-sU-6e0"/>
+                                <exclude reference="p0d-u2-c16"/>
+                                <exclude reference="sag-8A-EPv"/>
                                 <exclude reference="uiR-00-VRC"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="zsx-N8-kfD"/>
+                                <include reference="HVb-cd-xnz"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="ZVB-sU-6e0"/>
+                                <include reference="iPw-tE-Vhd"/>
+                                <include reference="NK7-ap-bmu"/>
+                                <include reference="ZJd-BH-THS"/>
+                                <exclude reference="ZVB-sU-6e0"/>
+                                <exclude reference="p0d-u2-c16"/>
+                                <exclude reference="sag-8A-EPv"/>
                                 <include reference="uiR-00-VRC"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="HVb-cd-xnz" id="y20-PN-o53"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="microphone" width="100" height="100"/>
+    </resources>
 </document>

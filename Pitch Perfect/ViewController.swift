@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBOutlet weak var recordingLabel: UILabel!
+    
+    @IBAction func recordAudio(sender: UIButton) {
+        recordingLabel.hidden = !recordingLabel.hidden;
+        //TODO: Record the user's voice
+        
+    }
+    
 }
-
