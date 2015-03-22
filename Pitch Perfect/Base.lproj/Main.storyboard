@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -31,9 +31,22 @@
                                 <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.27246408789642057" green="0.52190574518471788" blue="0.7442787247474747" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="stop_button" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2u-f8-rXK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button" image="stop_button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="175" y="362" width="50" height="50"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stop_recording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="efg-aK-lbC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="d2u-f8-rXK" secondAttribute="centerX" id="MXm-AD-U4J"/>
                             <constraint firstItem="zsx-N8-kfD" firstAttribute="centerX" secondItem="HVb-cd-xnz" secondAttribute="centerX" id="NK7-ap-bmu"/>
                             <constraint firstAttribute="centerX" secondItem="zsx-N8-kfD" secondAttribute="centerX" id="ZJd-BH-THS"/>
                             <constraint firstAttribute="centerX" secondItem="zsx-N8-kfD" secondAttribute="centerX" id="ZVB-sU-6e0"/>
@@ -48,9 +61,11 @@
                             <mask key="subviews">
                                 <exclude reference="zsx-N8-kfD"/>
                                 <exclude reference="HVb-cd-xnz"/>
+                                <exclude reference="d2u-f8-rXK"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="iPw-tE-Vhd"/>
+                                <exclude reference="MXm-AD-U4J"/>
                                 <exclude reference="NK7-ap-bmu"/>
                                 <exclude reference="ZJd-BH-THS"/>
                                 <exclude reference="ZVB-sU-6e0"/>
@@ -63,9 +78,11 @@
                             <mask key="subviews">
                                 <include reference="zsx-N8-kfD"/>
                                 <include reference="HVb-cd-xnz"/>
+                                <include reference="d2u-f8-rXK"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="iPw-tE-Vhd"/>
+                                <include reference="MXm-AD-U4J"/>
                                 <include reference="NK7-ap-bmu"/>
                                 <include reference="ZJd-BH-THS"/>
                                 <exclude reference="ZVB-sU-6e0"/>
@@ -77,6 +94,7 @@
                     </view>
                     <connections>
                         <outlet property="recordingLabel" destination="HVb-cd-xnz" id="y20-PN-o53"/>
+                        <outlet property="stop_recording" destination="d2u-f8-rXK" id="inv-zv-J73"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -85,5 +103,6 @@
     </scenes>
     <resources>
         <image name="microphone" width="100" height="100"/>
+        <image name="stop_button" width="50" height="50"/>
     </resources>
 </document>

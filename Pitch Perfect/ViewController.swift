@@ -23,9 +23,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var recordingLabel: UILabel!
     
     @IBAction func recordAudio(sender: UIButton) {
-        recordingLabel.hidden = !recordingLabel.hidden;
+        recordingLabel.hidden = false;
         //TODO: Record the user's voice
         
     }
-    
+    @IBAction func stop_recording(sender: UIButton) {
+        recordingLabel.hidden = true;
+    }
 }
