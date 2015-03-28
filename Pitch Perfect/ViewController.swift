@@ -15,6 +15,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBOutlet weak var stopButton: UIButton!
+    
+    @IBOutlet weak var recordButton: UIButton!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -23,11 +26,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var recordingLabel: UILabel!
     
     @IBAction func recordAudio(sender: UIButton) {
-        recordingLabel.hidden = false;
+        recordButton.enabled = false
+        stopButton.hidden = false
+        recordingLabel.hidden = false
         //TODO: Record the user's voice
         
     }
-    @IBAction func stop_recording(sender: UIButton) {
-        recordingLabel.hidden = true;
+   
+    @IBAction func stopAudio(sender: UIButton) {
+        recordingLabel.hidden = true
+        
     }
-}
+    override func viewWillAppear(animated: Bool) {
+        //Hide the stop button
+        stopButton.hidden = true
+        recordButton.enabled = true
+        
+    }
+    
+    
+    
+    }
+
