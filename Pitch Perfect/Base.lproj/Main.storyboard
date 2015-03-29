@@ -48,7 +48,7 @@
                             <constraint firstItem="zsx-N8-kfD" firstAttribute="centerX" secondItem="HVb-cd-xnz" secondAttribute="centerX" id="NK7-ap-bmu"/>
                             <constraint firstAttribute="centerX" secondItem="zsx-N8-kfD" secondAttribute="centerX" id="ZJd-BH-THS"/>
                             <constraint firstAttribute="centerX" secondItem="zsx-N8-kfD" secondAttribute="centerX" id="ZVB-sU-6e0"/>
-                            <constraint firstItem="olo-D6-UL7" firstAttribute="top" secondItem="zsx-N8-kfD" secondAttribute="bottom" constant="50" id="ba6-at-zlr"/>
+                            <constraint firstItem="olo-D6-UL7" firstAttribute="top" secondItem="zsx-N8-kfD" secondAttribute="bottom" constant="100" id="ba6-at-zlr"/>
                             <constraint firstAttribute="centerX" secondItem="olo-D6-UL7" secondAttribute="centerX" constant="-2" id="d2o-5h-hUm"/>
                             <constraint firstItem="HVb-cd-xnz" firstAttribute="top" secondItem="zsx-N8-kfD" secondAttribute="bottom" constant="8" id="iPw-tE-Vhd">
                                 <variation key="widthClass=compact" constant="12"/>
@@ -126,28 +126,62 @@
                                     <action selector="playSlowAudio:" destination="MRU-4A-qWX" eventType="touchUpInside" id="3jp-eA-Kz3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8L-Bj-eoJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="fastsound">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="MRU-4A-qWX" eventType="touchUpInside" id="cAJ-GD-NLW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaN-21-ARL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="stopbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopAudioPlay:" destination="MRU-4A-qWX" eventType="touchUpInside" id="e1Y-xW-Jyl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hlZ-7r-2Hv" firstAttribute="leading" secondItem="Dol-bB-2PE" secondAttribute="leadingMargin" constant="30" id="67W-hg-rAW"/>
+                            <constraint firstItem="g8L-Bj-eoJ" firstAttribute="top" secondItem="6eS-s1-QN2" secondAttribute="bottom" constant="50" id="Fx2-Dr-XMs"/>
                             <constraint firstItem="hlZ-7r-2Hv" firstAttribute="top" secondItem="6eS-s1-QN2" secondAttribute="bottom" constant="50" id="IgL-2G-2dc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g8L-Bj-eoJ" secondAttribute="trailing" constant="30" id="TYf-pp-OwO"/>
+                            <constraint firstItem="9oU-MH-0be" firstAttribute="top" secondItem="JaN-21-ARL" secondAttribute="bottom" constant="100" id="pdi-1E-lOS"/>
+                            <constraint firstAttribute="centerX" secondItem="JaN-21-ARL" secondAttribute="centerX" id="r3X-Qn-l0d"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="hlZ-7r-2Hv"/>
+                                <exclude reference="g8L-Bj-eoJ"/>
+                                <exclude reference="JaN-21-ARL"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="67W-hg-rAW"/>
                                 <exclude reference="IgL-2G-2dc"/>
+                                <exclude reference="Fx2-Dr-XMs"/>
+                                <exclude reference="TYf-pp-OwO"/>
+                                <exclude reference="r3X-Qn-l0d"/>
+                                <exclude reference="pdi-1E-lOS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="hlZ-7r-2Hv"/>
+                                <include reference="g8L-Bj-eoJ"/>
+                                <include reference="JaN-21-ARL"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="67W-hg-rAW"/>
                                 <include reference="IgL-2G-2dc"/>
+                                <include reference="Fx2-Dr-XMs"/>
+                                <include reference="TYf-pp-OwO"/>
+                                <include reference="r3X-Qn-l0d"/>
+                                <include reference="pdi-1E-lOS"/>
                             </mask>
                         </variation>
                     </view>
@@ -176,6 +210,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fastsound" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowsound" width="100" height="100"/>
         <image name="stopbutton" width="50" height="50"/>
