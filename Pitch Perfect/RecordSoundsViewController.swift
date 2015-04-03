@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordSoundsViewController.swift
 //  Pitch Perfect
 //
 //  Created by AXZ on 3/7/15.
@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
 
+
+class RecordSoundsViewController: UIViewController {
+    var audioRecorder:AVAudioRecorder!
+    //Declared Globally
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,8 +34,23 @@ class ViewController: UIViewController {
         recordButton.enabled = false
         stopButton.hidden = false
         recordingLabel.hidden = false
-        //TODO: Record the user's voice
         
+        let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        
+        let currentDateTime = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "ddMMyyyy-HHmmss"
+        let recordingName = formatter.stringFromDate(currentDateTime)+".wav"
+        let pathArray = [dirPath, recordingName]
+        let filePath = NSURL.fileURLWithPathComponents(pathArray)
+        println(filePath)
+        
+        var session = AVAudioSession.sharedInstance()
+        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
+        
+        audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
+        audioRecorder.meteringEnabled = true
+        audioRecorder.record()
     }
    
     @IBAction func stopAudio(sender: UIButton) {
@@ -43,6 +63,7 @@ class ViewController: UIViewController {
         recordButton.enabled = true
         
     }
+    
     
     
     

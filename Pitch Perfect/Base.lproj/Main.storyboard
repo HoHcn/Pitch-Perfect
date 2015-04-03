@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qha-Hn-BpJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="RecordSoundsViewController" customModule="Pitch_Perfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -161,12 +162,12 @@
                                 <exclude reference="JaN-21-ARL"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="67W-hg-rAW"/>
-                                <exclude reference="IgL-2G-2dc"/>
+                                <exclude reference="pdi-1E-lOS"/>
+                                <exclude reference="r3X-Qn-l0d"/>
                                 <exclude reference="Fx2-Dr-XMs"/>
                                 <exclude reference="TYf-pp-OwO"/>
-                                <exclude reference="r3X-Qn-l0d"/>
-                                <exclude reference="pdi-1E-lOS"/>
+                                <exclude reference="67W-hg-rAW"/>
+                                <exclude reference="IgL-2G-2dc"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -176,12 +177,12 @@
                                 <include reference="JaN-21-ARL"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="67W-hg-rAW"/>
-                                <include reference="IgL-2G-2dc"/>
+                                <include reference="pdi-1E-lOS"/>
+                                <include reference="r3X-Qn-l0d"/>
                                 <include reference="Fx2-Dr-XMs"/>
                                 <include reference="TYf-pp-OwO"/>
-                                <include reference="r3X-Qn-l0d"/>
-                                <include reference="pdi-1E-lOS"/>
+                                <include reference="67W-hg-rAW"/>
+                                <include reference="IgL-2G-2dc"/>
                             </mask>
                         </variation>
                     </view>
