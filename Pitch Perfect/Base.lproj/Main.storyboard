@@ -27,11 +27,14 @@
                                     <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xHL-Ow-4fb"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="recordingLabel" text="Recording..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-cd-xnz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="recordingLabel" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVb-cd-xnz">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.27246408789642057" green="0.52190574518471788" blue="0.7442787247474747" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olo-D6-UL7">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -188,16 +191,16 @@
                                 <exclude reference="95y-0u-TBj"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="pdi-1E-lOS"/>
+                                <exclude reference="IKx-VR-GeW"/>
+                                <exclude reference="TEE-TN-Wvb"/>
+                                <exclude reference="r3X-Qn-l0d"/>
+                                <exclude reference="Fx2-Dr-XMs"/>
+                                <exclude reference="TYf-pp-OwO"/>
                                 <exclude reference="67W-hg-rAW"/>
                                 <exclude reference="IgL-2G-2dc"/>
                                 <exclude reference="BmH-kK-w8T"/>
                                 <exclude reference="bIW-Y8-sMp"/>
-                                <exclude reference="Fx2-Dr-XMs"/>
-                                <exclude reference="TYf-pp-OwO"/>
-                                <exclude reference="IKx-VR-GeW"/>
-                                <exclude reference="TEE-TN-Wvb"/>
-                                <exclude reference="r3X-Qn-l0d"/>
-                                <exclude reference="pdi-1E-lOS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -209,16 +212,16 @@
                                 <include reference="95y-0u-TBj"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="pdi-1E-lOS"/>
+                                <include reference="IKx-VR-GeW"/>
+                                <include reference="TEE-TN-Wvb"/>
+                                <include reference="r3X-Qn-l0d"/>
+                                <include reference="Fx2-Dr-XMs"/>
+                                <include reference="TYf-pp-OwO"/>
                                 <include reference="67W-hg-rAW"/>
                                 <include reference="IgL-2G-2dc"/>
                                 <include reference="BmH-kK-w8T"/>
                                 <include reference="bIW-Y8-sMp"/>
-                                <include reference="Fx2-Dr-XMs"/>
-                                <include reference="TYf-pp-OwO"/>
-                                <include reference="IKx-VR-GeW"/>
-                                <include reference="TEE-TN-Wvb"/>
-                                <include reference="r3X-Qn-l0d"/>
-                                <include reference="pdi-1E-lOS"/>
                             </mask>
                         </variation>
                     </view>

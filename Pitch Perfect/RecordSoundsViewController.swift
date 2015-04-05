@@ -12,29 +12,31 @@ import AVFoundation
 
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
-    var audioRecorder:AVAudioRecorder!
     //Declared Globally
+    var audioRecorder:AVAudioRecorder!
     var recordedAudio:RecordedAudio!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        recordingLabel.text = "Tap to record"
+        recordingLabel.hidden = false
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    @IBOutlet weak var stopButton: UIButton!
     
     @IBOutlet weak var recordButton: UIButton!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBOutlet weak var stopButton: UIButton!
+    
     @IBOutlet weak var recordingLabel: UILabel!
     
     @IBAction func recordAudio(sender: UIButton) {
         recordButton.enabled = false
         stopButton.hidden = false
-        recordingLabel.hidden = false
+        recordingLabel.text = "Recording..."
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
@@ -77,7 +79,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let playSoundVC:PlaySoundViewController = segue.destinationViewController as PlaySoundViewController
             let data = sender as RecordedAudio
             playSoundVC.receivedAudio = data
-            println("Prepared for Segue")
             
         }
     }
@@ -87,7 +88,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         //Stop recording the user's voice
         audioRecorder.stop()
-        println("hellow, mew!")
         var audioSession = AVAudioSession.sharedInstance()
         audioSession.setActive(false, error:nil)
         
@@ -96,6 +96,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         //Hide the stop button
         stopButton.hidden = true
         recordButton.enabled = true
+        
+        recordingLabel.text = "Tap to record"
+        recordingLabel.hidden = false
         
     }
     
