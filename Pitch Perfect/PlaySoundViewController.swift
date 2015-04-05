@@ -25,21 +25,22 @@ class PlaySoundViewController: UIViewController {
         audioFile = AVAudioFile(forReading: receivedAudio.filePathUrl, error: nil)
     }
     
-    @IBAction func playSlowAudio(sender: UIButton) {
+    func resetPlayer(){
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
-        audioPlayer.rate = 0.5
         audioPlayer.currentTime = 0.0
+    }
+    
+    @IBAction func playSlowAudio(sender: UIButton) {
+        resetPlayer()
+        audioPlayer.rate = 0.5
         audioPlayer.play()
     }
     
     @IBAction func playFastAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
+        resetPlayer()
         audioPlayer.rate = 2.0
-        audioPlayer.currentTime = 0.0
         audioPlayer.play()
     }
     @IBAction func playChipmunkAudio(sender: UIButton) {
@@ -47,10 +48,8 @@ class PlaySoundViewController: UIViewController {
         playAudioWithVariablePitch(1000)
     }
     func playAudioWithVariablePitch(pitch: Float){
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
-            
+        resetPlayer()
+        
         var audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
 
@@ -72,8 +71,7 @@ class PlaySoundViewController: UIViewController {
         
     }
     @IBAction func stopAudioPlay(sender: UIButton) {
-        audioPlayer.stop()
-        audioPlayer.currentTime = 0.0
+        resetPlayer()
     }
     
 }
