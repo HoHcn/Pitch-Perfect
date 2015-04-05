@@ -15,6 +15,7 @@
 		34BE4D111AAA77B700AFE49E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34BE4D101AAA77B700AFE49E /* Images.xcassets */; };
 		34BE4D141AAA77B700AFE49E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34BE4D121AAA77B700AFE49E /* LaunchScreen.xib */; };
 		34BE4D201AAA77B700AFE49E /* Pitch_PerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BE4D1F1AAA77B700AFE49E /* Pitch_PerfectTests.swift */; };
+		34D0F4E01AD109E600DC9CBE /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D0F4DF1AD109E600DC9CBE /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		34BE4D191AAA77B700AFE49E /* Pitch PerfectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pitch PerfectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34BE4D1E1AAA77B700AFE49E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34BE4D1F1AAA77B700AFE49E /* Pitch_PerfectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pitch_PerfectTests.swift; sourceTree = "<group>"; };
+		34D0F4DF1AD109E600DC9CBE /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				34BE4D091AAA77B700AFE49E /* AppDelegate.swift */,
 				34BE4D0B1AAA77B700AFE49E /* RecordSoundsViewController.swift */,
+				34D0F4DF1AD109E600DC9CBE /* RecordedAudio.swift */,
 				34BE4D0D1AAA77B700AFE49E /* Main.storyboard */,
 				3401D2821AC6A9CD008DC8AE /* PlaySoundViewController.swift */,
 				34BE4D101AAA77B700AFE49E /* Images.xcassets */,
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D0F4E01AD109E600DC9CBE /* RecordedAudio.swift in Sources */,
 				34BE4D0C1AAA77B700AFE49E /* RecordSoundsViewController.swift in Sources */,
 				3401D2831AC6A9CD008DC8AE /* PlaySoundViewController.swift in Sources */,
 				34BE4D0A1AAA77B700AFE49E /* AppDelegate.swift in Sources */,
