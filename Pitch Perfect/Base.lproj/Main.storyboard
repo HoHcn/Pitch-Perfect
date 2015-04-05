@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qha-Hn-BpJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -145,13 +145,37 @@
                                     <action selector="stopAudioPlay:" destination="MRU-4A-qWX" eventType="touchUpInside" id="e1Y-xW-Jyl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tju-aB-VuJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="MRU-4A-qWX" eventType="touchUpInside" id="je4-Sz-0CB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95y-0u-TBj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darthvader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthVaderAudio:" destination="MRU-4A-qWX" eventType="touchUpInside" id="P2K-xT-SRb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hlZ-7r-2Hv" firstAttribute="leading" secondItem="Dol-bB-2PE" secondAttribute="leadingMargin" constant="30" id="67W-hg-rAW"/>
+                            <constraint firstItem="tju-aB-VuJ" firstAttribute="top" secondItem="hlZ-7r-2Hv" secondAttribute="bottom" constant="36" id="BmH-kK-w8T">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
                             <constraint firstItem="g8L-Bj-eoJ" firstAttribute="top" secondItem="6eS-s1-QN2" secondAttribute="bottom" constant="50" id="Fx2-Dr-XMs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="95y-0u-TBj" secondAttribute="trailing" constant="30" id="IKx-VR-GeW"/>
                             <constraint firstItem="hlZ-7r-2Hv" firstAttribute="top" secondItem="6eS-s1-QN2" secondAttribute="bottom" constant="50" id="IgL-2G-2dc"/>
+                            <constraint firstItem="95y-0u-TBj" firstAttribute="top" secondItem="g8L-Bj-eoJ" secondAttribute="bottom" constant="50" id="TEE-TN-Wvb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g8L-Bj-eoJ" secondAttribute="trailing" constant="30" id="TYf-pp-OwO"/>
+                            <constraint firstItem="tju-aB-VuJ" firstAttribute="leading" secondItem="Dol-bB-2PE" secondAttribute="leadingMargin" constant="30" id="bIW-Y8-sMp"/>
                             <constraint firstItem="9oU-MH-0be" firstAttribute="top" secondItem="JaN-21-ARL" secondAttribute="bottom" constant="100" id="pdi-1E-lOS"/>
                             <constraint firstAttribute="centerX" secondItem="JaN-21-ARL" secondAttribute="centerX" id="r3X-Qn-l0d"/>
                         </constraints>
@@ -160,14 +184,20 @@
                                 <exclude reference="hlZ-7r-2Hv"/>
                                 <exclude reference="g8L-Bj-eoJ"/>
                                 <exclude reference="JaN-21-ARL"/>
+                                <exclude reference="tju-aB-VuJ"/>
+                                <exclude reference="95y-0u-TBj"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="pdi-1E-lOS"/>
-                                <exclude reference="r3X-Qn-l0d"/>
-                                <exclude reference="Fx2-Dr-XMs"/>
-                                <exclude reference="TYf-pp-OwO"/>
                                 <exclude reference="67W-hg-rAW"/>
                                 <exclude reference="IgL-2G-2dc"/>
+                                <exclude reference="BmH-kK-w8T"/>
+                                <exclude reference="bIW-Y8-sMp"/>
+                                <exclude reference="Fx2-Dr-XMs"/>
+                                <exclude reference="TYf-pp-OwO"/>
+                                <exclude reference="IKx-VR-GeW"/>
+                                <exclude reference="TEE-TN-Wvb"/>
+                                <exclude reference="r3X-Qn-l0d"/>
+                                <exclude reference="pdi-1E-lOS"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -175,14 +205,20 @@
                                 <include reference="hlZ-7r-2Hv"/>
                                 <include reference="g8L-Bj-eoJ"/>
                                 <include reference="JaN-21-ARL"/>
+                                <include reference="tju-aB-VuJ"/>
+                                <include reference="95y-0u-TBj"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="pdi-1E-lOS"/>
-                                <include reference="r3X-Qn-l0d"/>
-                                <include reference="Fx2-Dr-XMs"/>
-                                <include reference="TYf-pp-OwO"/>
                                 <include reference="67W-hg-rAW"/>
                                 <include reference="IgL-2G-2dc"/>
+                                <include reference="BmH-kK-w8T"/>
+                                <include reference="bIW-Y8-sMp"/>
+                                <include reference="Fx2-Dr-XMs"/>
+                                <include reference="TYf-pp-OwO"/>
+                                <include reference="IKx-VR-GeW"/>
+                                <include reference="TEE-TN-Wvb"/>
+                                <include reference="r3X-Qn-l0d"/>
+                                <include reference="pdi-1E-lOS"/>
                             </mask>
                         </variation>
                     </view>
@@ -211,6 +247,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="fastsound" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowsound" width="100" height="100"/>
